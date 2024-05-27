@@ -1,6 +1,6 @@
 /*-------------------------------- Constants --------------------------------*/
 
-
+const operators = [ '+', '-', '*', '/' ]
 
 /*-------------------------------- Variables --------------------------------*/
 
@@ -16,4 +16,19 @@ const equalButtonElement = document.querySelector('.button-equals')
 
 /*----------------------------- Event Listeners -----------------------------*/
 
+numberButtonElement.addEventListener('click', (evt) => {
+
+})
+
+operatorButtonElement.addEventListener('click', (evt) => {
+
+})
+
+clearButtonElement.addEventListener('click', (evt) => {
+
+})
+
+equalButtonElement.addEventListener('click', (evt) => {
+    
+})
 /*-------------------------------- Functions --------------------------------*/
