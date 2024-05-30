@@ -32,3 +32,15 @@ equalButtonElement.addEventListener('click', (evt) => {
     
 })
 /*-------------------------------- Functions --------------------------------*/
+
+function calculate() {
+
+}
+
+function clear() {
+
+}
+
+function updateDisplay () {
+
+}
