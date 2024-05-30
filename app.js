@@ -4,7 +4,9 @@ const operators = [ '+', '-', '*', '/' ]
 
 /*-------------------------------- Variables --------------------------------*/
 
-
+let num1 = ''
+let num2 = ''
+let operator = ''
 
 /*------------------------ Cached Element References ------------------------*/
 
@@ -32,9 +34,9 @@ operatorButtonElements.forEach(button => {
 
 clearButtonElement.addEventListener('click', clear)
 
-//equalButtonElement.addEventListener('click', (evt) => {
+equalButtonElement.addEventListener('click', calculate)
     
-//})
+
 /*-------------------------------- Functions --------------------------------*/
 
 function calculate() {
@@ -43,6 +45,9 @@ function calculate() {
 
 function clear() {
     displayElement.textContent = '0'
+    num1 = ''
+    num2 = ''
+    operator = ''
 }
 
 function updateDisplay (input) {
