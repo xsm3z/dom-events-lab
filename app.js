@@ -30,9 +30,7 @@ operatorButtonElements.forEach(button => {
     })
 })
 
-//clearButtonElement.addEventListener('click', (evt) => {
-
-//})
+clearButtonElement.addEventListener('click', clear)
 
 //equalButtonElement.addEventListener('click', (evt) => {
     
@@ -44,7 +42,7 @@ function calculate() {
 }
 
 function clear() {
-
+    displayElement.textContent = '0'
 }
 
 function updateDisplay (input) {
