@@ -9,28 +9,34 @@ const operators = [ '+', '-', '*', '/' ]
 /*------------------------ Cached Element References ------------------------*/
 
 const displayElement = document.querySelector('.display')
-const numberButtonElement = document.querySelectorAll('.button-number')
-const operatorButtonElement = document.querySelectorAll('.button-operator')
-const clearButtonElement = document.querySelector('.button-clear')
-const equalButtonElement = document.querySelector('.button-equals')
+const numberButtonElements = document.querySelectorAll('.button.number')
+const operatorButtonElements = document.querySelectorAll('.button.operator')
+const clearButtonElement = document.querySelector('.button.clear')
+const equalButtonElement = document.querySelector('.button.equals')
 
 /*----------------------------- Event Listeners -----------------------------*/
 
-numberButtonElement.addEventListener('click', (evt) => {
-
+numberButtonElements.forEach(button => {
+    button.addEventListener('click', (event) => {
+        let clickedNumber = event.target.innerText
+        updateDisplay(clickedNumber)
+    })
 })
 
-operatorButtonElement.addEventListener('click', (evt) => {
-
+operatorButtonElements.forEach(button => {
+    button.addEventListener('click', (event) => {
+        operator = event.target.innerText
+        updateDisplay(operator)
+    })
 })
 
-clearButtonElement.addEventListener('click', (evt) => {
+//clearButtonElement.addEventListener('click', (evt) => {
 
-})
+//})
 
-equalButtonElement.addEventListener('click', (evt) => {
+//equalButtonElement.addEventListener('click', (evt) => {
     
-})
+//})
 /*-------------------------------- Functions --------------------------------*/
 
 function calculate() {
@@ -41,6 +47,6 @@ function clear() {
 
 }
 
-function updateDisplay () {
-
+function updateDisplay (input) {
+    displayElement.textContent = input
 }
